@@ -11,11 +11,6 @@ const url = "https://docs.google.com/spreadsheets/d/1CuZSGGJnNKkaYBUB5hZlNIGjK44
 export const getEvents = () => __awaiter(void 0, void 0, void 0, function* () {
     const response = yield fetch(url);
     const content = yield response.text();
-    /*
-        const content = `"イベント名","イベント種別","開催日","説明"
-    "らんらん会 #40. 山の日SP","らんらん会","2025/08/10",""
-    "かえるのいべんと","外部イベント","2025/08/13","テスト"`
-    */
     const data = content.split("\n").slice(1) //改行で分割、見出し1行を削除
         .map(r => {
         const cells = r.split(",")
