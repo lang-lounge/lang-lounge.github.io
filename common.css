@@ -1,0 +1,260 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: 0.5rem auto 1rem auto;
+    padding: 0 20px 3px 20px;
+    width: fit-content;
+    text-align: center;
+    border-bottom: #888 solid 1px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    border-left: #b3e0ff solid 8px;
+    background-color: #e6f1f9;
+    padding: 5px 0 5px 10px;
+    margin: 2rem 0 1rem 0;
+}
+
+.header {
+    background-color: #fff0e6;
+    padding: 1rem 0;
+}
+
+.headerBox {
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+}
+
+.headerBox a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    margin-right: 20px;
+    border-radius: 10px;
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    color: #463213;
+    margin: 0;
+    
+}
+
+.discordLink {
+    position: absolute;
+    right: 0;
+    height: 60px;
+    aspect-ratio: 1;
+    border: #5865f2 1px solid;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.discordLink i {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.discordLink a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discordLink:hover {
+    background-color: #5865f2;
+}
+
+.discordLink:hover i {
+    color: white;
+}
+
+.linkBar {
+    background-color: #463213c0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.linkBar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid #ffffff70;
+    transition: color 0.3s ease;
+}
+
+.linkBar a:last-child {
+    border-right: none;
+}
+
+.linkBar a:hover {
+    color: #ffffffa0;
+}
+
+.mainContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0 1.5rem 0;
+}
+
+.floatBox {
+    border: 1px solid #a0a0a0;
+    padding: 10px 12px;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px 0 #00000030;
+    border-radius: 3px;
+}
+
+.pageLink {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #5d431b;
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.pageLink::after {
+    content: '';
+    pointer-events: none;
+    width: 6px;
+    height: 6px;
+    border: solid #888;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0.4lh;
+    right: -12px;
+    margin: auto;
+    transition: right 0.3s ease;
+}
+
+.pageLink:hover {
+    color: #a98041;
+}
+
+.pageLink:hover::after {
+    right: -20px;
+}
+
+.dateView span {
+    font-family: "Roboto Mono", monospace;
+}
+
+.dateView i {
+    margin-right: 3px;
+}
+
+#eventsBox {
+    margin: 1.5rem 0;
+}
+
+.event {
+    padding: 1rem 1rem;
+    border-bottom: #aaa 1px dashed;
+}
+
+.event:first-child {
+    padding-top: 0;
+}
+
+.eventInfo {
+    display: flex;
+}
+
+.eventTags span {
+    display: inline-flex;
+    font-size: 0.9rem;
+    height: 1lh;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    color: white;
+    margin-right: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.eventTags span[data-type="らんらん会"] {
+    background-color: #e9755d;
+}
+.eventTags span[data-type="想創会"] {
+    background-color: #4da7e2;
+}
+.eventTags span[data-type="その他イベント"] {
+    background-color: #7bc436;
+}
+
+.eventTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.eventDesc {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media screen and (max-width: 834px) {
+    .headerBox {
+        flex-direction: column;
+        height: auto;
+    }
+    .logoBox {
+        height: 4rem;
+    }
+    .discordLink {
+        position: static;
+        margin-top: 5px;
+        width: 4rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+    }
+}

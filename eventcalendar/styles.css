@@ -1,0 +1,107 @@
+.calendarBox {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.calendarInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+#monthView {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+}
+
+#preButton, #nextButton {
+    width: 28px;
+    height: 28px;
+    background-color: #463213;
+    border-radius: 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#preButton::after, #nextButton::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: white solid;
+    border-width: 3px 3px 0 0;
+}
+
+#preButton::after {
+    left: 40%;
+    transform: rotate(-135deg);
+}
+
+#nextButton::after {
+    right: 40%;
+    transform: rotate(45deg);
+}
+
+#calendar table {
+    border: 1px solid #a0a0a0;
+    box-shadow: 0 0 10px 0 #00000030;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#calendar th, #calendar td {
+    border: 1px solid #a0a0a0;
+    vertical-align: top;
+}
+
+#calendar th {
+    padding: 3px 0;
+}
+
+#calendar td {
+    font-family: "Roboto Mono", monospace;
+    padding: 3px 7px 5px 7px;
+    line-height: 1.4;
+    height: 2.6rem;
+}
+
+#calendar td:first-child, #calendar th:first-child {
+    color: #cf2d0d;
+}
+#calendar td:last-child, #calendar th:last-child {
+    color: #0085dd;
+}
+
+#calendar .markRow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
+}
+
+#calendar .mark {
+    display: inline-block;
+    height: 0.8em;
+    width: 0.8em;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+#calendar .mark[data-type="らんらん会"] {
+    background-color: #cf2d0d;
+}
+#calendar .mark[data-type="想創会"] {
+    background-color: #0085dd;
+}
+#calendar .mark[data-type="その他イベント"] {
+    background-color: #69d305;
+}
