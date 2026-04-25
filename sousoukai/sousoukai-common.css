@@ -35,11 +35,11 @@
 }
 
 .slot.break  .slotNumber::before {
-    background-color: #b3e0ff;
+    background-color: #8bd1ff;
 }
 
 .slot.special .slotNumber::before {
-    background-color: #e4cdbf;
+    background-color: #e0b194;
 }
 
 .slotNumber::after {
